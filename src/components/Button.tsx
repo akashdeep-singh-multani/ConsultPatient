@@ -8,10 +8,11 @@ const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   size = 'medium',
   disabled = false,
+  rounded = false,
 }) => {
   return (
     <button
-      className={`button ${variant} ${size}`}
+      className={`button ${variant} ${size} ${rounded ? 'rounded' : ''}`}
       onClick={onClick}
       disabled={disabled}
     >

@@ -14,6 +14,7 @@ import {
 import { DashboardData } from '../interfaces/DashboardData';
 import { fetchDashboardData } from '../services/api';
 import DashCard from '../components/DashCard';
+import GettingStartedCard from '../components/GettingStartedCard';
 
 const Dashboard: React.FC = () => {
   const [data, setData] = useState<DashboardData | null>(null);
@@ -49,6 +50,14 @@ const Dashboard: React.FC = () => {
         </Suspense>
         <br></br>
         <DashCard {...data} />
+        <br></br>
+        <GettingStartedCard {...data} />
+        {/* <AboutMedicationCard
+          heading="About your medication"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" // Add video URL
+        />
+        <ArticleSuggestion {...data.gettingStartedData} /> */}
       </div>
     </div>
   );

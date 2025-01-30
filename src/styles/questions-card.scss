@@ -7,14 +7,26 @@
   max-width: none;
   width: 100%;
 
+  // Header section for icon and title
+  display: flex; /* Use flexbox to align the icon and title on the same line */
+  flex-direction: column; /* Stack elements vertically by default */
+  gap: 0.5rem; /* Space between the items (icon + title) */
+
+  // Icon and title on the same line in larger screens
+  .questions-card__header {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically align items */
+    gap: 10px; /* Space between icon and title */
+  }
+
   &__icon {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Size of the icon */
   }
 
   &__title {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-top: 0.5rem;
+    margin-top: 0; /* Remove margin-top if it's unnecessary */
   }
 
   &__description,
@@ -34,4 +46,12 @@
     cursor: not-allowed;
     margin-top: 0.8rem;
   }
+
+  /* Make icon and title align properly in small screens (mobile-first approach) */
+  //   @media (max-width: 768px) {
+  //     .questions-card__header {
+  //       flex-direction: column; /* Stack icon and title vertically on smaller screens */
+  //       align-items: flex-start; /* Align to the left on small screens */
+  //     }
+  //   }
 }

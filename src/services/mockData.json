@@ -53,22 +53,22 @@
       "description": "gettingStarted medication description",
       "videoUrl": ""
     },
-    "articalsSuggestionData": [
+    "articlesSuggestionData": [
       {
         "title": "How to stay in control",
-        "imageUrl": ""
+        "imageUrl": "https://picsum.photos/200/300"
       },
       {
         "title": "Why Hydration is important",
-        "imageUrl": ""
+        "imageUrl": "https://fastly.picsum.photos/id/1/200/300.jpg?hmac=jH5bDkLr6Tgy3oAg5khKCHeunZMHq0ehBZr6vGifPLY"
       },
       {
         "title": "Avoiding the challenges",
-        "imageUrl": ""
+        "imageUrl": "https://fastly.picsum.photos/id/7/4728/3168.jpg?hmac=c5B5tfYFM9blHHMhuu4UKmhnbZoJqrzNOP9xjkV4w3o"
       },
       {
         "title": "New Year Reflections",
-        "imageUrl": ""
+        "imageUrl": "https://fastly.picsum.photos/id/12/2500/1667.jpg?hmac=Pe3284luVre9ZqNzv1jMFpLihFI6lwq7TPgMSsNXw2w"
       }
     ]
   }

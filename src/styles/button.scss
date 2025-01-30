@@ -24,6 +24,10 @@
     }
   }
 
+  &.rounded {
+    border-radius: 50px; /* This will make the button fully rounded */
+  }
+
   &.small {
     padding: 6px 12px;
     font-size: 12px;
