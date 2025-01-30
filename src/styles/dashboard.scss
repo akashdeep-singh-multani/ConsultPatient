@@ -1,0 +1,37 @@
+@use './variables' as variable;
+
+// Add padding or margin around the content after the header
+.dashboard-content {
+  margin: 20px; /* Adjust this value to your preference */
+  padding: 20px; /* Adjust this value to your preference */
+}
+
+/* General tab button styling */
+.nav-pills .nav-link {
+  background-color: transparent !important; /* Remove background */
+  border: none; /* Remove border */
+  border-bottom: 2px solid transparent; /* No bottom border initially */
+  color: variable.$disabled-color !important; /* Text color */
+  font-size: 16px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 !important;
+}
+
+/* Active tab styling */
+.nav-pills .nav-link.active {
+  color: variable.$primary-color !important; /* Ensure active tab text color is black */
+  border-bottom: 2px solid variable.$primary-color !important; /* Bottom border for active tab */
+  background-color: transparent !important; /* Ensure no background for active tab */
+}
+
+/* Optional: Icon styling */
+.tabview-btn-icon {
+  margin-right: 8px;
+}
+
+/* Styling for the content area */
+.tab-content {
+  margin-top: 20px;
+}

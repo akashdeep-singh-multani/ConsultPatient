@@ -1,0 +1,87 @@
+@use './variables.scss' as variable;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-left {
+  width: 60%;
+}
+
+.card-right {
+  width: 40%;
+  //   border-left: 2px solid #ccc;
+  padding-left: 20px;
+}
+
+.faq-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 15px;
+
+  &:hover {
+    color: #007bff;
+  }
+}
+
+.faq-answer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.faq-line {
+  margin-top: 10px;
+  border-bottom: 1px solid #949494; /* Line under FAQ items */
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-arrow.expanded {
+  transform: rotate(180deg); /* Rotate the arrow when expanded */
+}
+
+.read-more-btn {
+  background-color: transparent !important; /* No background */
+  color: variable.$teritiary-color; /* Text color */
+  border: none; /* Remove border */
+  font-size: 14px;
+  //   padding: 10px 20px; /* Padding for the button */
+  //   display: flex;
+  //   align-items: center;
+  margin: 0%;
+  padding: 0%;
+  cursor: pointer;
+  text-decoration: none; /* Ensure no underline if it's an anchor */
+
+  &:hover {
+    background-color: transparent !important; /* Ensure no background on hover */
+    text-decoration: none; /* Optional: Add underline on hover */
+  }
+
+  .icon {
+    margin-left: 8px; /* Space between text and icon */
+  }
+}

@@ -1,0 +1,27 @@
+// @import './variables.scss';
+@use './variables.scss' as variable;
+@use './button.scss';
+
+body,
+#root {
+  font-family: 'Noto Sans';
+  background-color: variable.$primary-bg-color;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+button {
+}
