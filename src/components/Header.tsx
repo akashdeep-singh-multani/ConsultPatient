@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import '../styles/header.scss';
-// import logo from '../assets/logo.png';
-import Logo from './Header/Logo';
-import HamburgerMenu from './Header/HamburgerMenu';
-import UserAvatar from './Header/UserAvatar';
-import UserDropdown from './Header/UserDropdown';
 import { Link } from 'react-router-dom';
 
-// Header Component
+// Lazy loading components
+const Logo = lazy(() => import('./Header/Logo'));
+const HamburgerMenu = lazy(() => import('./Header/HamburgerMenu'));
+const UserAvatar = lazy(() => import('./Header/UserAvatar'));
+const UserDropdown = lazy(() => import('./Header/UserDropdown'));
+
 const Header: React.FC = () => {
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
@@ -24,10 +24,15 @@ const Header: React.FC = () => {
 
   return (
     <header className="header">
-      <Logo />
+      {/* Suspense wrapper for lazy-loaded components */}
+      <Suspense fallback={<div>Loading Logo...</div>}>
+        <Logo />
+      </Suspense>
 
       {/* Hamburger for mobile */}
-      <HamburgerMenu onClick={toggleNav} />
+      <Suspense fallback={<div>Loading Menu...</div>}>
+        <HamburgerMenu onClick={toggleNav} />
+      </Suspense>
 
       <nav className={`header__nav ${isNavOpen ? 'header__nav--open' : ''}`}>
         <Link
@@ -54,10 +59,17 @@ const Header: React.FC = () => {
       </nav>
 
       <div className="header__user-info">
-        <UserAvatar userName="John" onClick={toggleDropdown} />
-        {dropdownOpen && <UserDropdown />}
+        <Suspense fallback={<div>Loading Avatar...</div>}>
+          <UserAvatar userName="John" onClick={toggleDropdown} />
+        </Suspense>
+        {dropdownOpen && (
+          <Suspense fallback={<div>Loading Dropdown...</div>}>
+            <UserDropdown />
+          </Suspense>
+        )}
       </div>
     </header>
   );
 };
+
 export default Header;

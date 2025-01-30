@@ -1,36 +1,12 @@
 @use './variables.scss' as variable;
 
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.card-body {
-  display: flex;
-  justify-content: space-between;
-}
-
-.card-left {
-  width: 60%;
-}
-
-.card-right {
-  width: 40%;
-  //   border-left: 2px solid #ccc;
-  padding-left: 20px;
-}
-
-.faq-list {
+.collapsible-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.faq-item {
+.collapsible-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,22 +20,22 @@
   }
 }
 
-.faq-answer {
+.collapsible-content {
   margin-top: 10px;
   font-size: 14px;
   color: #555;
 }
 
-.faq-line {
+.collapsible-line {
   margin-top: 10px;
-  border-bottom: 1px solid #949494; /* Line under FAQ items */
+  border-bottom: 1px solid #949494; /* Line under collapsible items */
 }
 
-.faq-arrow {
+.collapsible-arrow {
   transition: transform 0.3s ease;
 }
 
-.faq-arrow.expanded {
+.collapsible-arrow.expanded {
   transform: rotate(180deg); /* Rotate the arrow when expanded */
 }
 
@@ -68,9 +44,6 @@
   color: variable.$teritiary-color; /* Text color */
   border: none; /* Remove border */
   font-size: 14px;
-  //   padding: 10px 20px; /* Padding for the button */
-  //   display: flex;
-  //   align-items: center;
   margin: 0%;
   padding: 0%;
   cursor: pointer;
@@ -85,86 +58,48 @@
     margin-left: 8px; /* Space between text and icon */
   }
 }
+
 /* Mobile responsiveness (up to 768px) */
 @media (max-width: 768px) {
-  .card-body {
-    flex-direction: column; /* Stack left and right sections */
-  }
-
-  .card-left {
-    width: 100%; /* Take up full width */
-    padding-bottom: 10px; /* Add spacing between the sections */
-  }
-
-  .card-right {
-    display: none; /* Hide the right section on mobile */
-  }
-
-  .faq-item {
+  .collapsible-item {
     font-size: 14px; /* Adjust font size for better readability */
   }
 
-  .faq-answer {
+  .collapsible-content {
     font-size: 13px;
   }
 
-  .faq-line {
+  .collapsible-line {
     margin-top: 8px;
   }
 }
 
 /* Tablet responsiveness (769px to 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .card-body {
-    flex-direction: row; /* Keep content side by side */
-  }
-
-  .card-left {
-    width: 60%; /* Left section takes 60% width */
-  }
-
-  .card-right {
-    width: 35%; /* Right section takes 35% width */
-    padding-left: 15px; /* Adjust padding for tablets */
-  }
-
-  .faq-item {
+  .collapsible-item {
     font-size: 14px; /* Slightly smaller font size */
   }
 
-  .faq-answer {
+  .collapsible-content {
     font-size: 13px;
   }
 
-  .faq-line {
+  .collapsible-line {
     margin-top: 8px;
   }
 }
 
 /* Desktop responsiveness (1025px and above) */
 @media (min-width: 1025px) {
-  .card-body {
-    flex-direction: row; /* Keep content side by side */
-  }
-
-  .card-left {
-    width: 60%; /* Left section takes 60% width */
-  }
-
-  .card-right {
-    width: 35%; /* Right section takes 35% width */
-    padding-left: 20px;
-  }
-
-  .faq-item {
+  .collapsible-item {
     font-size: 15px; /* Normal font size */
   }
 
-  .faq-answer {
+  .collapsible-content {
     font-size: 14px;
   }
 
-  .faq-line {
+  .collapsible-line {
     margin-top: 10px;
   }
 }

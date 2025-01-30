@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Tab, Nav } from 'react-bootstrap';
-import Card from './Card';
 import { TabsComponentProps } from '../interfaces/TabsComponentProps';
+
+// Lazy load Card component
+const Card = lazy(() => import('./Card'));
 
 const TabsComponent: React.FC<TabsComponentProps> = ({ tabsData }) => {
   return (
@@ -20,13 +22,15 @@ const TabsComponent: React.FC<TabsComponentProps> = ({ tabsData }) => {
 
       <Tab.Content>
         {tabsData.map((tab, index) => (
-          <Tab.Pane key={index} eventKey={tab.eventKey}>
-            <Card
-              title={tab.cardTitle}
-              description={tab.cardDescription}
-              buttonLabel={tab.buttonLabel}
-            />
-          </Tab.Pane>
+          <Suspense key={index} fallback={<div>Loading...</div>}>
+            <Tab.Pane eventKey={tab.eventKey}>
+              <Card
+                title={tab.cardTitle}
+                description={tab.cardDescription}
+                buttonLabel={tab.buttonLabel}
+              />
+            </Tab.Pane>
+          </Suspense>
         ))}
       </Tab.Content>
     </Tab.Container>
