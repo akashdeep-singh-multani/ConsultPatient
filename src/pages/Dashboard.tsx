@@ -1,8 +1,8 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
+import LoadingSkeleton from '../components/LoadingSkeleton';
 
 // Lazy load components
 const Header = lazy(() => import('../components/Header'));
-const Card = lazy(() => import('../components/Card'));
 const TabsComponent = lazy(() => import('../components/TabsComponent'));
 
 import '../styles/dashboard.scss';
@@ -11,12 +11,31 @@ import {
   HEADING_NURSE,
   TABS_DATA,
 } from '../constants/constants';
+import { DashboardData } from '../interfaces/DashboardData';
+import { fetchDashboardData } from '../services/api';
+import DashCard from '../components/DashCard';
 
 const Dashboard: React.FC = () => {
+  const [data, setData] = useState<DashboardData | null>(null);
+
+  useEffect(() => {
+    const loadDashboardData = async () => {
+      try {
+        const response: DashboardData = await fetchDashboardData(); // Explicitly typing the response here
+        setData(response); // Now TypeScript knows `response` is of type `DashboardData`
+      } catch (error) {
+        console.error('Error loading dashboard data:', error);
+      }
+    };
+
+    loadDashboardData();
+  }, []); // Empty dependency array to run this effect once when the component mounts
+  if (!data) return <LoadingSkeleton />;
+  console.log('data fetched from api: ' + JSON.stringify(data));
   return (
     <div>
       {/* Suspense wrapper to show a fallback while components are loading */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingSkeleton height="60px" />}>
         <Header />
       </Suspense>
 
@@ -25,27 +44,11 @@ const Dashboard: React.FC = () => {
         <p>{HEADING_DESC_NURSE}</p>
 
         {/* Lazy load TabsComponent */}
-        <Suspense fallback={<div>Loading Tabs...</div>}>
+        <Suspense fallback={<LoadingSkeleton height="40px" />}>
           <TabsComponent tabsData={TABS_DATA} />
         </Suspense>
-
-        <h3>Dashboard</h3>
-
-        {/* Lazy load Card components */}
-        <Suspense fallback={<div>Loading card...</div>}>
-          <Card
-            title="Welcome Claire"
-            description="Request a consult with one of our qualified nurses."
-            buttonLabel="Request now"
-          />
-        </Suspense>
-        <Suspense fallback={<div>Loading card...</div>}>
-          <Card
-            title="Services"
-            description="Set up a reminder so you don't miss an appointment or treatment."
-            buttonLabel="Setup now"
-          />
-        </Suspense>
+        <br></br>
+        <DashCard {...data} />
       </div>
     </div>
   );

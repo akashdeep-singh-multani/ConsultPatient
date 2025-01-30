@@ -22,17 +22,54 @@
       "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
   ],
-  "services": [
-    {
-      "id": 1,
-      "title": "Request a Consult",
-      "content": "Request a consult with one of our qualified nurses. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-      "id": 2,
-      "title": "Set Up a Reminder",
-      "content": "Set up a reminder so you don't miss an appointment or treatment. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  "dashData": {
+    "heading": "dash heading",
+    "description": "dash description",
+    "services": [
+      {
+        "id": 1,
+        "title": "Request a Consult",
+        "content": "Request a consult with one of our qualified nurses. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "buttonLabel": "Request now"
+      },
+      {
+        "id": 2,
+        "title": "Set Up a Reminder",
+        "content": "Set up a reminder so you don't miss an appointment or treatment. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "buttonLabel": "Set up now"
+      }
+    ],
+    "questionCardData": {
+      "description": "Ask an expert about your treatment",
+      "operatingHours": "Operating hours: 9am - 5:30pm Australian Eastern Time",
+      "buttonLabel": "Chat with us"
     }
-  ],
-  "operatingHours": "9am - 5.30pm Australian"
+  },
+  "gettingStartedData": {
+    "heading": "gettingStarted heading",
+    "description": "gettingStarted description",
+    "medicationInfo": {
+      "heading": "gettingStarted medication heading",
+      "description": "gettingStarted medication description",
+      "videoUrl": ""
+    },
+    "articalsSuggestionData": [
+      {
+        "title": "How to stay in control",
+        "imageUrl": ""
+      },
+      {
+        "title": "Why Hydration is important",
+        "imageUrl": ""
+      },
+      {
+        "title": "Avoiding the challenges",
+        "imageUrl": ""
+      },
+      {
+        "title": "New Year Reflections",
+        "imageUrl": ""
+      }
+    ]
+  }
 }

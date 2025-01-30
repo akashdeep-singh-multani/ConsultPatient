@@ -3,7 +3,7 @@ import { Tab, Nav } from 'react-bootstrap';
 import { TabsComponentProps } from '../interfaces/TabsComponentProps';
 
 // Lazy load Card component
-const Card = lazy(() => import('./Card'));
+const ListCard = lazy(() => import('./ListCard'));
 
 const TabsComponent: React.FC<TabsComponentProps> = ({ tabsData }) => {
   return (
@@ -24,7 +24,7 @@ const TabsComponent: React.FC<TabsComponentProps> = ({ tabsData }) => {
         {tabsData.map((tab, index) => (
           <Suspense key={index} fallback={<div>Loading...</div>}>
             <Tab.Pane eventKey={tab.eventKey}>
-              <Card
+              <ListCard
                 title={tab.cardTitle}
                 description={tab.cardDescription}
                 buttonLabel={tab.buttonLabel}

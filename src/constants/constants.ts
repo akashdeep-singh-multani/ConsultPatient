@@ -47,3 +47,9 @@ export const HEADING_DESC_NURSE = 'Find a trusted tool for the program';
 export const CARD_HEADING_NURSE = 'Nurse education service';
 export const CARD_SUB_HEADING_NURSE =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididuntLorem ipsum dolor sit ame onsectetur adip.';
+
+export const QUESTIONS_CARD_TITLE = 'Questions?';
+export const BOOKING_INFO_TITLE = 'Your nurse call booking:';
+export const BOOKING_DESC = 'No current booking';
+export const REMINDER_TITLE = 'Your reminders';
+export const REMINDER_DESC = 'No current booking';

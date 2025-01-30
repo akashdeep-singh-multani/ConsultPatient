@@ -1,0 +1,27 @@
+@use '../styles/variables.scss' as variable;
+
+.info-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid black;
+  width: 100%;
+  max-width: none;
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  &__content {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  &__link {
+    color: variable.$teritiary-color;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: block;
+  }
+}

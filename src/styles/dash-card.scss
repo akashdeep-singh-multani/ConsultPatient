@@ -1,0 +1,31 @@
+.dash-card {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap in small screens */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+  /* Left Section (takes 60% width on large screens) */
+  .left-section {
+    width: 60%; /* Default for large screens */
+    padding-right: 20px; /* Optional padding to space it from right section */
+
+    /* Stack on small screens */
+    @media (max-width: 768px) {
+      width: 100%; /* Full width for small screens */
+      padding-right: 0; /* Optional: Remove padding on small screens */
+    }
+  }
+
+  /* Right Section (takes 40% width on large screens) */
+  .right-section {
+    width: 40%; /* Default for large screens */
+
+    /* Stack on small screens */
+    @media (max-width: 768px) {
+      width: 100%; /* Full width for small screens */
+      margin-top: 20px; /* Add some space between left and right section */
+    }
+  }
+}
