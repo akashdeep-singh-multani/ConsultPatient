@@ -16,14 +16,24 @@ import { fetchDashboardData } from '../services/api';
 import DashCard from '../components/DashCard';
 import GettingStartedCard from '../components/GettingStartedCard';
 
+/**
+ * Dashboard component that loads and displays the dashboard data,
+ * along with various components such as header, tabs, and cards.
+ * It loads dashboard data asynchronously and renders components with
+ * fallback skeleton loading indicators.
+ *
+ * @component
+ * @returns {React.FC} - The Dashboard component.
+ */
+
 const Dashboard: React.FC = () => {
   const [data, setData] = useState<DashboardData | null>(null);
 
   useEffect(() => {
     const loadDashboardData = async () => {
       try {
-        const response: DashboardData = await fetchDashboardData(); // Explicitly typing the response here
-        setData(response); // Now TypeScript knows `response` is of type `DashboardData`
+        const response: DashboardData = await fetchDashboardData();
+        setData(response);
       } catch (error) {
         console.error('Error loading dashboard data:', error);
       }
@@ -32,16 +42,14 @@ const Dashboard: React.FC = () => {
     loadDashboardData();
   }, []); // Empty dependency array to run this effect once when the component mounts
   if (!data) return <LoadingSkeleton />;
-  console.log('data fetched from api: ' + JSON.stringify(data));
   return (
     <div>
-      {/* Suspense wrapper to show a fallback while components are loading */}
       <Suspense fallback={<LoadingSkeleton height="60px" />}>
         <Header />
       </Suspense>
 
       <div className="dashboard-content">
-        <h2>{HEADING_NURSE}</h2>
+        <h2 className="heading">{HEADING_NURSE}</h2>
         <p>{HEADING_DESC_NURSE}</p>
 
         {/* Lazy load TabsComponent */}
@@ -52,12 +60,6 @@ const Dashboard: React.FC = () => {
         <DashCard {...data} />
         <br></br>
         <GettingStartedCard {...data} />
-        {/* <AboutMedicationCard
-          heading="About your medication"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" // Add video URL
-        />
-        <ArticleSuggestion {...data.gettingStartedData} /> */}
       </div>
     </div>
   );

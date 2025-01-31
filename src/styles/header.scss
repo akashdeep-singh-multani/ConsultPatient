@@ -12,6 +12,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: variable.$font-family;
 
+  position: sticky;
+  top: 0; // Sticks the header to the top of the viewport
+  z-index: 1000; // Ensures it's above other elements on the page
+  width: 100%; // Ensure it takes full width of the viewport
   &__logo {
     flex: 0 1 auto;
   }

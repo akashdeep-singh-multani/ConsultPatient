@@ -23,6 +23,36 @@ body,
   padding: 20px;
 }
 
-.simple-card {
-  padding: 20px;
+.card-body-heading {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.card-body-description {
+  font-size: 15px;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+.sub-heading {
+  font-size: 30px;
+  font-weight: 400;
+  color: variable.$teritiary-color;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 700;
+  color: black;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }

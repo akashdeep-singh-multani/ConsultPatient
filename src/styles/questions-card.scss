@@ -6,27 +6,28 @@
   font-family: Arial, sans-serif;
   max-width: none;
   width: 100%;
+  position: relative; // Required for absolute positioning of the button
+  min-height: 200px; // Ensure the card has a minimum height
 
   // Header section for icon and title
-  display: flex; /* Use flexbox to align the icon and title on the same line */
-  flex-direction: column; /* Stack elements vertically by default */
-  gap: 0.5rem; /* Space between the items (icon + title) */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-  // Icon and title on the same line in larger screens
   .questions-card__header {
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Vertically align items */
-    gap: 10px; /* Space between icon and title */
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   &__icon {
-    font-size: 1.5rem; /* Size of the icon */
+    font-size: 1.5rem;
   }
 
   &__title {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-top: 0; /* Remove margin-top if it's unnecessary */
+    margin-top: 0;
   }
 
   &__description,
@@ -37,21 +38,25 @@
   }
 
   &__button {
+    position: absolute; // Position the button absolutely within the card
+    bottom: 1rem; // Distance from the bottom
+    right: 1rem; // Distance from the right
     background-color: white;
     color: #007bff;
     border: 1px solid #007bff;
-    padding: 0.5rem;
-    border-radius: 5px;
+    padding: 0; // Remove padding to ensure the button stays small
+    border-radius: 50%; // Make the button round
+    width: 40px; // Fixed width for a small button
+    height: 40px; // Fixed height for a small button
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1rem;
     cursor: not-allowed;
-    margin-top: 0.8rem;
-  }
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional: Add a subtle shadow
 
-  /* Make icon and title align properly in small screens (mobile-first approach) */
-  //   @media (max-width: 768px) {
-  //     .questions-card__header {
-  //       flex-direction: column; /* Stack icon and title vertically on smaller screens */
-  //       align-items: flex-start; /* Align to the left on small screens */
-  //     }
-  //   }
+    &:hover {
+      background-color: #f0f0f0; // Light hover effect
+    }
+  }
 }

@@ -1,4 +1,7 @@
+@use './variables.scss' as variable;
+
 .about-medication-card {
+  padding-top: 10px;
   border: none;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -32,30 +35,32 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(0, 123, 255, 0.8);
+      background-color: variable.$teritiary-color;
       border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      border-radius: 50%; // Make it circular
+      width: 60px; // Adjust size as needed
+      height: 60px; // Adjust size as needed
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // Add a subtle shadow
 
-      &:hover {
-        background-color: rgba(0, 123, 255, 1);
-      }
+      //   &:hover {
+      //     background-color: darken(red, 10%); // Darken the button on hover
+      //   }
 
       .fa-play {
-        color: white;
-        font-size: 20px;
+        color: white; // Icon color
+        font-size: 24px; // Adjust icon size
       }
     }
   }
 
-  .card-body {
+  .card-med-body {
     padding: 20px;
+    display: block;
 
     .about-medication-heading {
       font-size: 24px;
@@ -78,4 +83,9 @@
       margin-bottom: 0;
     }
   }
+}
+
+.about-medication-container {
+  display: flex;
+  flex-direction: column;
 }

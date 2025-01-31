@@ -1,8 +1,16 @@
 import React from 'react';
 import '../styles/action-card.scss';
-import { ActionCardProps } from '../interfaces/ActionCardProps';
+import { ActionCardProps } from '../interfaces/ActionCardProps'; // Importing ActionCardProps from an external file
 import Button from './Button';
 
+/**
+ * ActionCard component displays a title, description, and a button.
+ * The button triggers an action when clicked.
+ *
+ * @component
+ * @param {ActionCardProps} props - The props for the component.
+ * @returns {React.FC} - The ActionCard component.
+ */
 const ActionCard: React.FC<ActionCardProps> = ({
   title,
   description,
@@ -13,8 +21,8 @@ const ActionCard: React.FC<ActionCardProps> = ({
   return (
     <div className="action-card">
       <div className="content">
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <h3 className="sub-heading">{title}</h3>
+        <p className="card-body-description">{description}</p>
       </div>
       <Button
         text={buttonText}

@@ -8,32 +8,51 @@ const HamburgerMenu = lazy(() => import('./Header/HamburgerMenu'));
 const UserAvatar = lazy(() => import('./Header/UserAvatar'));
 const UserDropdown = lazy(() => import('./Header/UserDropdown'));
 
+/**
+ * A header component that includes a logo, navigation links, a hamburger menu for mobile, and a user avatar with a dropdown.
+ * The component supports lazy loading of individual parts for better performance.
+ *
+ * @component
+ * @returns {React.FC} - The Header component.
+ */
 const Header: React.FC = () => {
+  // State to manage the dropdown open/close state
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
-  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
-  const [activeLink, setActiveLink] = useState<string>('home'); // state to track active link
 
+  // State to manage the navigation menu open/close state (for mobile)
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
+
+  // State to track the active navigation link
+  const [activeLink, setActiveLink] = useState<string>('home');
+
+  /**
+   * Toggles the user dropdown menu visibility.
+   */
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+
+  /**
+   * Toggles the navigation menu visibility (for mobile).
+   */
   const toggleNav = () => setIsNavOpen(!isNavOpen);
 
-  // Handle click for setting active link
+  /**
+   * Handles link click to set the active link and close the navigation menu on mobile.
+   *
+   * @param {string} link - The clicked link identifier (home, faq, help).
+   */
   const handleLinkClick = (link: string) => {
     setActiveLink(link);
-    setIsNavOpen(false); // Close nav on link click (for mobile)
+    setIsNavOpen(false); // Close the nav on link click for mobile view
   };
 
   return (
     <header className="header">
-      {/* Suspense wrapper for lazy-loaded components */}
+      {/* Suspense wrapper for lazy-loaded Logo component */}
       <Suspense fallback={<div>Loading Logo...</div>}>
         <Logo />
       </Suspense>
 
-      {/* Hamburger for mobile */}
-      <Suspense fallback={<div>Loading Menu...</div>}>
-        <HamburgerMenu onClick={toggleNav} />
-      </Suspense>
-
+      {/* Navigation menu */}
       <nav className={`header__nav ${isNavOpen ? 'header__nav--open' : ''}`}>
         <Link
           to="#home"
@@ -58,15 +77,26 @@ const Header: React.FC = () => {
         </Link>
       </nav>
 
-      <div className="header__user-info">
-        <Suspense fallback={<div>Loading Avatar...</div>}>
-          <UserAvatar userName="John" onClick={toggleDropdown} />
+      <div className="flex-end">
+        {/* Suspense wrapper for lazy-loaded HamburgerMenu component */}
+        <Suspense fallback={<div>Loading Menu...</div>}>
+          <HamburgerMenu onClick={toggleNav} />
         </Suspense>
-        {dropdownOpen && (
-          <Suspense fallback={<div>Loading Dropdown...</div>}>
-            <UserDropdown />
+
+        {/* User information section */}
+        <div className="header__user-info">
+          {/* Suspense wrapper for lazy-loaded UserAvatar component */}
+          <Suspense fallback={<div>Loading Avatar...</div>}>
+            <UserAvatar userName="John" onClick={toggleDropdown} />
           </Suspense>
-        )}
+
+          {/* Conditionally render UserDropdown if the dropdown is open */}
+          {dropdownOpen && (
+            <Suspense fallback={<div>Loading Dropdown...</div>}>
+              <UserDropdown />
+            </Suspense>
+          )}
+        </div>
       </div>
     </header>
   );

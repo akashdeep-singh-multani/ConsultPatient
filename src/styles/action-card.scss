@@ -6,6 +6,12 @@
   border-bottom: 1px solid #ddd;
   background: #fff;
 
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack content and button vertically on small screens
+    align-items: flex-start; // Align content to the left
+    gap: 12px; // Add spacing between content and button
+  }
+
   .content {
     flex: 1;
 
@@ -29,9 +35,14 @@
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    flex-shrink: 0; // Prevent button from shrinking
 
     &:hover {
       background-color: #900;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%; // Make button full width on small screens
     }
   }
 }
