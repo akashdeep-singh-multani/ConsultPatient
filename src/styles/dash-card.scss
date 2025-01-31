@@ -10,9 +10,10 @@
   .left-section {
     width: 60%; /* Default for large screens */
     padding-right: 20px; /* Optional padding to space it from right section */
+    padding-top: 20px;
 
     /* Stack on small screens */
-    @media (max-width: 768px) {
+    @media (max-width: 975px) {
       width: 100%; /* Full width for small screens */
       padding-right: 0; /* Optional: Remove padding on small screens */
     }
@@ -24,9 +25,14 @@
     width: 40%; /* Default for large screens */
 
     /* Stack on small screens */
-    @media (max-width: 768px) {
+    @media (max-width: 975px) {
       width: 100%; /* Full width for small screens */
       margin-top: 20px; /* Add some space between left and right section */
     }
   }
+}
+
+.gettingStartedContainer {
+  display: flex;
+  flex-direction: column;
 }

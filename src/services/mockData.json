@@ -23,8 +23,8 @@
     }
   ],
   "dashData": {
-    "heading": "dash heading",
-    "description": "dash description",
+    "heading": "Welcome Claire",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "services": [
       {
         "id": 1,
@@ -46,12 +46,13 @@
     }
   },
   "gettingStartedData": {
-    "heading": "gettingStarted heading",
-    "description": "gettingStarted description",
+    "heading": "Help getting started",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "medicationInfo": {
-      "heading": "gettingStarted medication heading",
-      "description": "gettingStarted medication description",
-      "videoUrl": ""
+      "heading": "About your medication",
+      "body_heading": "Learn about your medication",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     },
     "articlesSuggestionData": [
       {

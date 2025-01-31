@@ -53,3 +53,5 @@ export const BOOKING_INFO_TITLE = 'Your nurse call booking:';
 export const BOOKING_DESC = 'No current booking';
 export const REMINDER_TITLE = 'Your reminders';
 export const REMINDER_DESC = 'No current booking';
+export const VIDEO_POSTER_URL =
+  'https://s3-alpha-sig.figma.com/img/1047/b294/b5afaaa8ff39192994465653bf2f509f?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XZXm4ounjV38xCGGZkQ5EOQV36YY23-B6Pt0iqPjuTFuxpfIK1t-zJvsZ3JdMOc~hrQo-EPBNXLLehfVJbk~Dh2AH8P1O9XlrADp7NHlZ4PuRSmGVxYv4NvVyf0ey5q3gaH9X8o4WQx~wSqnzkAE4qyACv4CUgzb30oIHtdFEERJnNdCuRD3cdpVY2WwA7mW4UI-yXTvZGfv7bAlZ5xu75xwTAJVN8W-L8-a5BeXaygZoBJGqB6raWuWgly9HxxwPSrYeUOrzGbR7NqHAohrFsIi4wzO4LRLgtG3M7VCpQjagEhQF7Jgx5uFEF2qyiIxyczMVXUDnKnMEcIHgGM4Ow__';
