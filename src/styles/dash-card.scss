@@ -3,14 +3,14 @@
   flex-wrap: wrap; /* Allow items to wrap in small screens */
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  //   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
 
   /* Left Section (takes 60% width on large screens) */
   .left-section {
     width: 60%; /* Default for large screens */
-    padding-right: 20px; /* Optional padding to space it from right section */
-    padding-top: 20px;
+    padding-right: 30px; /* Optional padding to space it from right section */
+    // padding-top: 20px;
 
     /* Stack on small screens */
     @media (max-width: 975px) {
@@ -21,7 +21,7 @@
 
   /* Right Section (takes 40% width on large screens) */
   .right-section {
-    padding-top: 20px;
+    // padding-top: 20px;
     width: 40%; /* Default for large screens */
 
     /* Stack on small screens */
@@ -35,4 +35,14 @@
 .gettingStartedContainer {
   display: flex;
   flex-direction: column;
+}
+
+.simple-card {
+  padding: 10px;
+}
+
+.tabs-card .nav-item-50 .nav-link {
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 700;
 }

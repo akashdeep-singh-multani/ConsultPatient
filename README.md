@@ -27,8 +27,8 @@
 
 Click the button below to open the project demo.
 
-<a href="https://your-live-demo-link.com" target="_blank">
-  <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt="Live Demo">
+<a href="https://connect-patient-l0l3zuwv6-akashs-projects-931526f1.vercel.app/" target="_blank">
+  <img src="https://vercel.com/favicon.svg" alt="Live Demo">
 </a>
 
 <br>
@@ -104,9 +104,11 @@ Once the server is running, open your browser and go to [http://localhost:3000](
 
 ### Example Dashboard
 
-<p align="center">
-  <img alt="Screenshot of CONNECT Patient Dashboard" src="https://your-image-link.com/screenshot.png">
-</p>
+![alt text](./src/assets/screenshots/ConnectPatient-Prod1.PNG)
+
+![alt text](./src/assets/screenshots/ConnectPatient-Prod2.PNG)
+
+![alt text](./src/assets/screenshots/ConnectPatient-Prod3.PNG)
 
 The dashboard contains:
 
@@ -127,7 +129,7 @@ We welcome contributions to CONNECT Patient! To contribute:
 3. Make your changes.
 4. Commit your changes:
    ```bash
-   git commit -am 'Add new feature'
+   git commit -m 'Add new feature'
    ```
 5. Push your changes to your fork:
    ```bash
@@ -149,3 +151,15 @@ This project is licensed under the MIT License.
 - **React** for the modern front-end architecture.
 - **Vite** for fast and optimized builds.
 - **TypeScript** for static typing and enhanced developer experience.
+
+---
+
+Explanation of Approach
+In this project, I followed a modular approach to component design by creating reusable components for different parts of the application, such as dashboard cards, tabs, and buttons. These components were designed to handle specific tasks (like rendering patient data, handling actions, and interacting with APIs) while ensuring ease of maintenance.
+
+The app is built with React, TypeScript, and Bootstrap, which allows for clean and scalable architecture while ensuring responsive design. Additionally, I integrated Jest and React Testing Library to create test cases for key components to ensure stability and quality of the application.
+
+Assumptions Made
+The project uses a mockData.json file to provide data when needed instead of fetching data from an API. This was done to simplify development and testing without requiring a backend server.
+The necessary configuration for tools like Husky, ESLint, and Prettier was already set up to ensure consistent code formatting and quality across the project.
+A basic understanding of React, TypeScript, and modern web development practices was assumed for contributors to the project.

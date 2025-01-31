@@ -39,23 +39,25 @@ const QuestionsCard: React.FC<QuestionsCardProps> = ({
         <div className="questions-card__icon">💬</div>
 
         {/* Title of the card */}
-        <h4 className="questions-card__title">{title}</h4>
+        <h4 className="card-body-heading">{title}</h4>
       </div>
 
       {/* Description of the card */}
-      <p className="questions-card__description">{description}</p>
+      <p className="card-body-description">{description}</p>
 
       {/* Operating hours displayed in the card */}
-      <p className="questions-card__hours">{operatingHours}</p>
+      <p className="card-body-description">{operatingHours}</p>
 
-      {/* Button with passed text, styled as primary and disabled */}
-      <Button
-        text={buttonText}
-        variant="primary"
-        size="small"
-        rounded={true}
-        disabled={true}
-      />
+      <div className="flex-end">
+        {/* Button with passed text, styled as primary and disabled */}
+        <Button
+          text={buttonText}
+          variant="primary"
+          size="small"
+          rounded={true}
+          disabled={true}
+        />
+      </div>
     </div>
   );
 };

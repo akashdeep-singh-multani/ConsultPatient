@@ -17,33 +17,45 @@ body,
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
+// .card {
+//   border-radius: 8px;
+//   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+//   padding: 20px;
+// }
 
 .card-body-heading {
   font-size: 24px;
   font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 32.69px;
 }
 
 .card-body-description {
   font-size: 15px;
   font-weight: 400;
   color: #1a1a1a;
+  line-height: 20px;
+}
+
+.pad-left {
+  padding-left: 10px;
 }
 
 .sub-heading {
   font-size: 30px;
   font-weight: 400;
   color: variable.$teritiary-color;
+  line-height: 40.86px;
+  letter-spacing: -2%;
+  color: #be0028;
 }
 
 .heading {
   font-size: 40px;
   font-weight: 700;
-  color: black;
+  color: #1a1a1a;
+  line-height: 54.48px;
+  letter-spacing: -2%;
 }
 
 .flex-column {
@@ -55,4 +67,16 @@ body,
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.nav-pills .nav-link {
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 700;
+}
+
+simple-card {
+  p {
+    @extend .card-body-description;
+  }
 }

@@ -1,5 +1,28 @@
 @use './variables' as variable;
 
+.dashboard-content {
+  position: relative;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    &::after {
+      width: 90px;
+      height: 90px;
+      top: 5px;
+      right: 5px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &::after {
+      width: 70px;
+      height: 70px;
+      top: 2px;
+      right: 2px;
+    }
+  }
+}
+
 // Add padding or margin around the content after the header
 .dashboard-content {
   margin: 20px; /* Adjust this value to your preference */

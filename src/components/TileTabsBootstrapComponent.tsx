@@ -1,41 +1,41 @@
 import React from 'react';
-import { Tab, Nav, Row, Col } from 'react-bootstrap';
+import { Tab, Nav, Card } from 'react-bootstrap';
+import '../styles/tile-tabs.scss';
+import DashCard from './DashCard';
+import GettingStartedCard from './GettingStartedCard';
+import { DashCardProps } from '../interfaces/DashCardProps';
+import { GettingStartedData } from '../interfaces/GettingStartedData';
 
-const TileTabsComponent = () => {
+const TileTabsComponent: React.FC<{
+  dashData: DashCardProps;
+  gettingStartedData: GettingStartedData;
+}> = ({ dashData, gettingStartedData }) => {
   return (
-    <Tab.Container id="tile-tabs" defaultActiveKey="home">
-      <Row>
-        {/* Tiles (Nav) */}
-        <Col sm={12}>
-          <Nav variant="pills" className="flex-row">
+    <Card className="tabs-card">
+      <Tab.Container id="tile-tabs" defaultActiveKey="dashboard">
+        <Card.Header>
+          <Nav className="flex-row nav-container">
             <Nav.Item className="nav-item-50">
-              <Nav.Link eventKey="home">Home</Nav.Link>
+              <Nav.Link eventKey="dashboard">Dashboard</Nav.Link>
             </Nav.Item>
             <Nav.Item className="nav-item-50">
-              <Nav.Link eventKey="profile">Profile</Nav.Link>
+              <Nav.Link eventKey="getting-started">Getting Started</Nav.Link>
             </Nav.Item>
           </Nav>
-        </Col>
+        </Card.Header>
 
-        {/* Content (Tab Panes) */}
-        <Col sm={9}>
+        <Card.Body>
           <Tab.Content>
-            <Tab.Pane eventKey="home">
-              <h3>Home Content</h3>
-              <p>Welcome to the Home tab!</p>
+            <Tab.Pane eventKey="dashboard">
+              <DashCard {...dashData} />
             </Tab.Pane>
-            <Tab.Pane eventKey="profile">
-              <h3>Profile Content</h3>
-              <p>This is your profile.</p>
-            </Tab.Pane>
-            <Tab.Pane eventKey="settings">
-              <h3>Settings Content</h3>
-              <p>Adjust your settings here.</p>
+            <Tab.Pane eventKey="getting-started">
+              <GettingStartedCard gettingStartedData={gettingStartedData} />
             </Tab.Pane>
           </Tab.Content>
-        </Col>
-      </Row>
-    </Tab.Container>
+        </Card.Body>
+      </Tab.Container>
+    </Card>
   );
 };
 

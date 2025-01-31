@@ -1,31 +1,21 @@
 .article-suggestion {
-  //   padding-top: 20px;
   background-color: white;
   border-radius: 8px;
-  //   margin: 20px 0;
 
   .article-suggestion-title {
     font-size: 24px;
-    // font-weight: 700;
-    // margin-bottom: 20px;
     text-align: center;
     color: #333;
   }
 
   .article-suggestion-grid {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(250px, 1fr)
-    ); // Default: 1 column on small screens
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    // padding-top: 10px;
+    padding-top: 10px;
 
     @media (min-width: 768px) {
-      grid-template-columns: repeat(
-        2,
-        1fr
-      ); // 2 columns on medium and large screens
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .article-card {
@@ -57,12 +47,11 @@
       }
 
       .card-body {
-        // padding: 20px;
+        padding: 0px;
         flex-grow: 1; // Allow card body to take up remaining space
         display: flex;
         flex-direction: column;
         justify-content: space-between; // Align content to top and bottom
-        // min-height: 150px; // Ensure consistent card body height
 
         .title-icon-container {
           display: flex;
@@ -79,7 +68,6 @@
         }
 
         .circle-icon-button {
-          //   background-color: #007bff;
           border: 1px solid #999999;
           border-radius: 50%; // Make it circular
           width: 37px; // Adjust size as needed
@@ -99,4 +87,7 @@
       }
     }
   }
+}
+.article-suggestion .article-suggestion-grid .article-card {
+  padding: 10px;
 }

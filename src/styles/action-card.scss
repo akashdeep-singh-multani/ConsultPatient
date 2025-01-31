@@ -1,8 +1,12 @@
+@use './variables.scss' as variable;
+
 .action-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-top: 20px;
   border-bottom: 1px solid #ddd;
   background: #fff;
 
@@ -22,13 +26,14 @@
     }
 
     p {
+      padding: 0%;
       font-size: 14px;
       color: #555;
     }
   }
 
   .action-button {
-    background-color: #c00;
+    background-color: variable.$teritiary-color;
     color: white;
     padding: 10px 16px;
     border: none;
@@ -38,7 +43,7 @@
     flex-shrink: 0; // Prevent button from shrinking
 
     &:hover {
-      background-color: #900;
+      background-color: variable.$teritiary-color;
     }
 
     @media (max-width: 768px) {

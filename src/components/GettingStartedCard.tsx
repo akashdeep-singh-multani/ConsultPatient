@@ -31,7 +31,9 @@ const GettingStartedCard: React.FC<GettingStartedCardProps> = ({
 
   return (
     <div className="gettingStartedContainer">
-      <SimpleCard title={heading} description={description} />
+      <div className="simple-card">
+        <SimpleCard title={heading} description={description} />
+      </div>
       <div className="dash-card">
         {/* Left Column */}
         <div className="left-section">

@@ -47,10 +47,6 @@
       transition: background-color 0.3s ease;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // Add a subtle shadow
 
-      //   &:hover {
-      //     background-color: darken(red, 10%); // Darken the button on hover
-      //   }
-
       .fa-play {
         color: white; // Icon color
         font-size: 24px; // Adjust icon size
@@ -87,5 +83,8 @@
 
 .about-medication-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Ensures the sub-heading and card are stacked vertically */
+  align-items: flex-start; /* Aligns elements to the left (or center if needed) */
+  gap: 10px; /* Adds spacing between sub-heading and the card */
+  width: 100%;
 }

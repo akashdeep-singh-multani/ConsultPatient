@@ -21,7 +21,7 @@ const ActionCard: React.FC<ActionCardProps> = ({
   return (
     <div className="action-card">
       <div className="content">
-        <h3 className="sub-heading">{title}</h3>
+        <h3>{title}</h3>
         <p className="card-body-description">{description}</p>
       </div>
       <Button

@@ -20,7 +20,6 @@
 
 .card-right {
   width: 40%;
-  //   border-left: 2px solid #ccc;
   padding-left: 20px;
 }
 
@@ -68,9 +67,6 @@
   color: variable.$teritiary-color; /* Text color */
   border: none; /* Remove border */
   font-size: 14px;
-  //   padding: 10px 20px; /* Padding for the button */
-  //   display: flex;
-  //   align-items: center;
   margin: 0%;
   padding: 0%;
   cursor: pointer;
@@ -78,7 +74,7 @@
 
   &:hover {
     background-color: transparent !important; /* Ensure no background on hover */
-    text-decoration: none; /* Optional: Add underline on hover */
+    text-decoration: none;
   }
 
   .icon {

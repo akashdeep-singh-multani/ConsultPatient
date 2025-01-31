@@ -13,8 +13,10 @@ import {
 } from '../constants/constants';
 import { DashboardData } from '../interfaces/DashboardData';
 import { fetchDashboardData } from '../services/api';
-import DashCard from '../components/DashCard';
-import GettingStartedCard from '../components/GettingStartedCard';
+
+// import GettingStartedCard from '../components/GettingStartedCard';
+import TileTabsComponent from '../components/TileTabsBootstrapComponent';
+import LazyBackgroundImage from '../components/LazyBackgroundImage';
 
 /**
  * Dashboard component that loads and displays the dashboard data,
@@ -48,6 +50,11 @@ const Dashboard: React.FC = () => {
         <Header />
       </Suspense>
 
+      <LazyBackgroundImage
+        src="/assets/BackgroundImage.png"
+        alt="Dashboard background"
+      ></LazyBackgroundImage>
+
       <div className="dashboard-content">
         <h2 className="heading">{HEADING_NURSE}</h2>
         <p>{HEADING_DESC_NURSE}</p>
@@ -57,9 +64,10 @@ const Dashboard: React.FC = () => {
           <TabsComponent tabsData={TABS_DATA} />
         </Suspense>
         <br></br>
-        <DashCard {...data} />
-        <br></br>
-        <GettingStartedCard {...data} />
+        <TileTabsComponent
+          dashData={data}
+          gettingStartedData={data.gettingStartedData}
+        />
       </div>
     </div>
   );

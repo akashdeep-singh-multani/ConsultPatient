@@ -8,7 +8,7 @@ export const TABS_DATA: TabData[] = [
     label: 'Nurse',
     cardTitle: 'Nurse education service',
     cardDescription:
-      'Providing best educational services with top educators...',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididuntLorem ipsum dolor sit ame onsectetur adip.',
     buttonLabel: 'Read more',
   },
   {

@@ -1,0 +1,76 @@
+.tabs-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: grey;
+
+  .card-header {
+    background-color: #ffffff;
+    padding: 0px;
+    border-bottom: none; // Remove border to avoid extra space
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    // padding-left: 20px; // Remove padding to avoid extra space
+  }
+
+  .nav-item-50 {
+    flex: 1;
+    text-align: center;
+
+    .nav-link {
+      text-decoration: none;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      padding: 10px; // Keep padding for the tabs themselves
+      border-radius: 0;
+      color: #333;
+      background-color: #f0f0f0; // Default unselected tab background
+      border: none; // Remove default border
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+      &:hover {
+        background-color: #e0e0e0; // Light hover effect
+      }
+
+      &.active {
+        background-color: white; // Active tab background
+        color: black; // Active tab text color
+        font-weight: bold; // Bold text for active tab
+      }
+    }
+  }
+
+  .card-body {
+    padding: 0; // Remove padding to avoid extra space
+  }
+
+  .tab-content {
+    margin: 0; // Remove margin to avoid extra space
+    padding: 0; // Remove padding to avoid extra space
+  }
+
+  .tab-pane {
+    padding: 0; // Remove padding to avoid extra space
+  }
+  .card-body-heading {
+    padding: 10px;
+    margin-bottom: 10px; /* Add space between heading and description */
+    font-size: 1.5rem; /* Example font size, adjust as needed */
+  }
+
+  .card-body-description {
+    padding: 10px;
+    font-size: 1rem; /* Adjust font size for description */
+    color: #6c757d; /* Example text color */
+  }
+}
+.about-medication-card .video-container .about-medication-video {
+  padding: 10px;
+}
