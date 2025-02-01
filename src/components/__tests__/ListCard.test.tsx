@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import Card from '../ListCard';
 import { FAQ_LIST } from '../../constants/constants';
+import React from 'react';
 
 describe('Card Component', () => {
   test('renders Card with title and description', () => {

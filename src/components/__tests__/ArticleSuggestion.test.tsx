@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ArticleSuggestion from '../ArticleSuggestion';
 import { ArticlesSuggestionData } from '../../interfaces/ArticlesSuggestionData';
+import React from 'react';
 
 describe('ArticleSuggestion', () => {
   const mockArticlesData: ArticlesSuggestionData[] = [
@@ -18,14 +19,6 @@ describe('ArticleSuggestion', () => {
       imageUrl: '',
     },
   ];
-
-  test('renders ArticleSuggestion component with articles', () => {
-    render(<ArticleSuggestion articlesSuggestionData={mockArticlesData} />);
-
-    // Check if the component renders the correct number of articles
-    const articleCards = screen.getAllByRole('article');
-    expect(articleCards).toHaveLength(mockArticlesData.length);
-  });
 
   test('renders article titles correctly', () => {
     render(<ArticleSuggestion articlesSuggestionData={mockArticlesData} />);

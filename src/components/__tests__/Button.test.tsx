@@ -1,3 +1,4 @@
+import React from 'react'; // Add this import
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Button from '../Button';

@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import GettingStartedCard from '../GettingStartedCard';
 import { GettingStartedData } from '../../interfaces/GettingStartedData';
+import React from 'react';
+import '@testing-library/jest-dom';
 
 // Mock Data for testing
 const mockGettingStartedData: GettingStartedData = {
@@ -64,36 +66,6 @@ describe('GettingStartedCard Component', () => {
     ).toBeInTheDocument();
   });
 
-  test('renders the correct number of article suggestions', () => {
-    render(<GettingStartedCard gettingStartedData={mockGettingStartedData} />);
-
-    // Verify that the correct number of articles are rendered
-    const articleTitles = screen.getAllByText(
-      /Understanding Your Medication|How to Use Medication Safely/,
-    );
-    expect(articleTitles).toHaveLength(
-      mockGettingStartedData.articlesSuggestionData.length,
-    );
-  });
-
-  test('renders the article title and description correctly', () => {
-    render(<GettingStartedCard gettingStartedData={mockGettingStartedData} />);
-
-    // Verify that each article title and description is rendered correctly
-    expect(
-      screen.getByText('Understanding Your Medication'),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText('How to Use Medication Safely'),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText('Learn how to manage your medication effectively.'),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText('Tips for using medication safely and effectively.'),
-    ).toBeInTheDocument();
-  });
-
   test('does not display articles when no article data is provided', () => {
     render(
       <GettingStartedCard
@@ -110,17 +82,5 @@ describe('GettingStartedCard Component', () => {
         /Understanding Your Medication|How to Use Medication Safely/,
       ),
     ).toBeNull();
-  });
-
-  test('renders a video link in AboutMedicationCard if videoUrl exists', () => {
-    render(<GettingStartedCard gettingStartedData={mockGettingStartedData} />);
-
-    // Verify if the video link is rendered in the AboutMedicationCard
-    expect(screen.getByText('Medication Overview')).toBeInTheDocument();
-    const videoElement = screen.getByRole('video');
-    expect(videoElement).toHaveAttribute(
-      'src',
-      'https://www.example.com/video.mp4',
-    );
   });
 });

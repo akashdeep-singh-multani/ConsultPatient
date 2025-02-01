@@ -1,5 +1,5 @@
 import { DashboardData } from '../interfaces/DashboardData';
-import mockData from './mockData.json';
+import mockData from './mockData';
 
 /**
  * Fetches dashboard data asynchronously with a simulated network delay.
@@ -13,7 +13,7 @@ import mockData from './mockData.json';
 export const fetchDashboardData = async (): Promise<DashboardData> => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(mockData);
+      resolve(mockData as DashboardData); // Explicitly cast mockData
     }, 1000); // Simulate network delay
   });
 };

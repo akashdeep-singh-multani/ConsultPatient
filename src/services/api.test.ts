@@ -1,8 +1,8 @@
 // fetchDashboardData.test.ts
 import { fetchDashboardData } from './api';
-import mockData from './mockData.json';
+import mockData from './mockData';
 
-jest.mock('./mockData.json', () => ({
+jest.mock('./mockData', () => ({
   someKey: 'mockDataValue', // mock the contents of your mockData.json here
 }));
 
@@ -27,15 +27,5 @@ describe('fetchDashboardData', () => {
     await expect(
       Promise.race([promise, timeoutPromise]),
     ).resolves.toBeDefined();
-  });
-
-  it('should handle rejection or failure gracefully (error handling)', async () => {
-    // Optionally, you can simulate failure scenarios if your service has error handling
-    // For example, you can introduce a failure case in the service to simulate errors.
-    // In the current case, this is not strictly necessary, but we could test error handling here if added.
-    // Example:
-    // jest.spyOn(global, 'setTimeout').mockImplementationOnce((fn, delay) => fn()); // Mock timeout to fail fast
-    // Example failure case
-    // await expect(fetchDashboardData()).rejects.toThrow("Error occurred");
   });
 });

@@ -11,6 +11,10 @@
   border-radius: 4px;
   transition: 0.3s ease-in-out;
 
+  .button.rounded {
+    border-radius: 50px; /* Fully rounded button */
+  }
+
   &.primary {
     background-color: variable.$teritiary-color;
     color: white;
@@ -53,4 +57,18 @@
     background-color: #ccc;
     cursor: not-allowed;
   }
+
+  &.rounded {
+    border-radius: 50px !important; /* Make sure this applies */
+    background-color: #ffffff;
+    color: #006373;
+    font-weight: 700;
+    line-height: 19.2px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Frutiger LT Std';
+  }
+}
+.button.rounded {
+  border-radius: 50px; /* Fully rounded button */
 }

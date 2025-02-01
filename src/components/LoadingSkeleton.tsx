@@ -21,7 +21,13 @@ const LoadingSkeleton: React.FC<{ height?: string; width?: string }> = ({
   height = '50px',
   width = '100%',
 }) => {
-  return <div className="skeleton" style={{ height, width }}></div>;
+  return (
+    <div
+      data-testid="loading-skeleton"
+      className="skeleton"
+      style={{ height, width }}
+    ></div>
+  );
 };
 
 export default LoadingSkeleton;

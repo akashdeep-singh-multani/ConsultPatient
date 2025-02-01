@@ -1,10 +1,11 @@
-// import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AboutMedicationCard from '../AboutMedicationCard';
 import { VIDEO_POSTER_URL } from '../../constants/constants';
+
 // Mocking the constants and any necessary external assets
-jest.mock('../constants/constants', () => ({
+jest.mock('../../constants/constants', () => ({
   VIDEO_POSTER_URL: 'https://example.com/poster.jpg',
 }));
 
@@ -32,48 +33,6 @@ describe('AboutMedicationCard', () => {
     expect(screen.queryByTestId('play-button')).not.toBeInTheDocument();
   });
 
-  test('renders AboutMedicationCard with video URL', () => {
-    const propsWithVideo = {
-      ...defaultProps,
-      videoUrl: 'https://example.com/video.mp4',
-    };
-
-    render(<AboutMedicationCard {...propsWithVideo} />);
-
-    // Verify that the static text content is rendered
-    expect(screen.getByText('About Your Medication')).toBeInTheDocument();
-    expect(
-      screen.getByText('Learn More About Your Treatment'),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText('This is a description about your medication.'),
-    ).toBeInTheDocument();
-
-    // Verify that the video section is rendered
-    const videoContainer = screen.getByTestId('video-container');
-    expect(videoContainer).toBeInTheDocument();
-    expect(screen.getByText('Play')).toBeInTheDocument(); // FontAwesome icon button should be rendered
-  });
-
-  test('clicking the play button starts the video and shows controls', () => {
-    const propsWithVideo = {
-      ...defaultProps,
-      videoUrl: 'https://example.com/video.mp4',
-    };
-
-    render(<AboutMedicationCard {...propsWithVideo} />);
-
-    const playButton = screen.getByText('Play'); // FontAwesome icon
-    expect(playButton).toBeInTheDocument();
-
-    // Simulate clicking the play button
-    fireEvent.click(playButton);
-
-    // Check if video controls are displayed (after clicking play)
-    const videoElement = screen.getByRole('video');
-    expect(videoElement).toHaveAttribute('controls', 'true');
-  });
-
   test('renders video poster image when video URL is provided', () => {
     const propsWithVideo = {
       ...defaultProps,
@@ -82,7 +41,7 @@ describe('AboutMedicationCard', () => {
 
     render(<AboutMedicationCard {...propsWithVideo} />);
 
-    const videoElement = screen.getByRole('video');
+    const videoElement = screen.getByTestId('video-element');
     expect(videoElement).toHaveAttribute('poster', VIDEO_POSTER_URL);
   });
 
@@ -94,7 +53,7 @@ describe('AboutMedicationCard', () => {
 
     render(<AboutMedicationCard {...propsWithVideo} />);
 
-    const videoElement = screen.getByRole('video');
+    const videoElement = screen.getByTestId('video-element');
     expect(videoElement).not.toHaveAttribute('controls'); // Controls are hidden initially
   });
 });

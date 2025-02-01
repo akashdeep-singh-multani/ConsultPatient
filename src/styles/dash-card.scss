@@ -24,6 +24,13 @@
     // padding-top: 20px;
     width: 40%; /* Default for large screens */
 
+    .info-card {
+      hr {
+        height: 2px !important;
+        background-color: black !important;
+      }
+    }
+
     /* Stack on small screens */
     @media (max-width: 975px) {
       width: 100%; /* Full width for small screens */
@@ -43,6 +50,12 @@
 
 .tabs-card .nav-item-50 .nav-link {
   font-size: 22px;
+  line-height: 25px;
+  font-weight: 700;
+}
+
+.header .header__nav .header__nav-link {
+  font-size: 16px;
   line-height: 25px;
   font-weight: 700;
 }

@@ -40,9 +40,14 @@ const AboutMedicationCard: React.FC<AboutMedicationCardProps> = ({
               poster={VIDEO_POSTER_URL} // Optional: Add a poster image for the first frame
               className="about-medication-video"
               onClick={handlePlayClick} // Play video on click
+              data-testid="video-element"
             />
             {!isPlaying && (
-              <button className="play-button" onClick={handlePlayClick}>
+              <button
+                data-testid="play-button"
+                className="play-button"
+                onClick={handlePlayClick}
+              >
                 <FontAwesomeIcon icon={faPlay} /> {/* Font Awesome play icon */}
               </button>
             )}

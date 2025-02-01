@@ -27,6 +27,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, content, linkText }) => {
     <div className="info-card">
       {/* Title of the card */}
       <h4 className="info-card__title">{title}</h4>
+      <hr></hr>
 
       {/* Content inside the card */}
       <p className="info-card__content">{content}</p>

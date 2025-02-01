@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react';
 import SimpleCard from '../SimpleCard';
+import React from 'react';
 
 describe('SimpleCard Component', () => {
   const defaultProps = {

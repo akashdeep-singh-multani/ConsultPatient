@@ -35,6 +35,7 @@ const Dashboard: React.FC = () => {
     const loadDashboardData = async () => {
       try {
         const response: DashboardData = await fetchDashboardData();
+        console.log('JSON.stringify(response):' + JSON.stringify(response));
         setData(response);
       } catch (error) {
         console.error('Error loading dashboard data:', error);

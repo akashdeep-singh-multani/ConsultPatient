@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS", // Jest requires CommonJS
+    "esModuleInterop": true, // Enable ES module interop
+    "noEmit": false, // Allow Jest to emit files during transformation
+    "jsx": "react" // Ensure JSX is set to "react"
+  },
+  "include": ["src", "__tests__"]
+}
