@@ -131,9 +131,12 @@ Once the server is running, open your browser and go to [http://localhost:3000](
 
 ### Example Dashboard
 
-![Dashboard Screenshot 1](../src/assets/screenshots/ConnectPatient-Prod1.PNG)
-![Dashboard Screenshot 2](../src/assets/screenshots/ConnectPatient-Prod2.PNG)
-![Dashboard Screenshot 3](../src/assets/screenshots/ConnectPatient-Prod3.PNG)
+<img width="929" alt="ConnectPatient-Prod1" src="https://github.com/user-attachments/assets/6c2f8eca-1573-4d1e-a0ca-b13de0534e0e" />
+
+<img width="930" alt="ConnectPatient-Prod2" src="https://github.com/user-attachments/assets/4acef612-c63f-48e8-82ff-f18feedc3fe6" />
+
+<img width="938" alt="ConnectPatient-Prod3" src="https://github.com/user-attachments/assets/82dd10fe-5465-4498-bfef-af7537a9c52b" />
+
 
 The dashboard contains:
 
