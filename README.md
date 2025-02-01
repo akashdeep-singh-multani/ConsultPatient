@@ -1,17 +1,22 @@
-<h1 align="center">CONNECT Patient</h1><br><br>
+<h1 align="center">CONNECT Patient</h1>
 
 <p align="center">
-<a href="https://github.com/akashdeep-singh-multani/ConsultPatient"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs"></a>
+  <a href="https://github.com/akashdeep-singh-multani/ConsultPatient">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs">
+  </a>
 </p>
 
-<br>
+<p align="center">
+  A React-based web application designed to help healthcare providers manage patient interactions, such as consultations and appointment reminders.
+</p>
 
-<p align="center">A React-based web application designed to help healthcare providers manage patient interactions, such as consultations and appointment reminders.</p>
+---
 
 ## Table of Contents
 
 - [Live Demo](#live-demo)
 - [Features](#features)
+- [Testing](#testing)
 - [Technology Stack](#technology-stack)
 - [Installation](#installation)
 - [Scripts](#scripts)
@@ -21,17 +26,15 @@
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
-<br>
+---
 
 ## Live Demo
 
-Click the button below to open the project demo.
+Click the button below to open the project demo:
 
-<a href="https://connect-patient-l0l3zuwv6-akashs-projects-931526f1.vercel.app/" target="_blank">
-  <img src="https://vercel.com/favicon.svg" alt="Live Demo">
-</a>
+[Live Demo](https://connect-patient-72xo4dc6m-akashs-projects-931526f1.vercel.app)
 
-<br>
+---
 
 ## Features
 
@@ -41,7 +44,23 @@ Click the button below to open the project demo.
 - Support for appointment reminders and consult requests.
 - Built with React and TypeScript for a modern and scalable architecture.
 
-<br>
+---
+
+## Testing
+
+The project includes unit tests written using **Jest** to ensure the reliability of components and services.
+
+- **Component Tests**: Located in `src/components/__tests__`, covering key UI components.
+- **Dashboard Page Tests**: Found in `src/pages/Dashboard.test.tsx`, verifying the behavior of the Dashboard page.
+- **Service API Tests**: Implemented in `src/services/api.test.ts`, testing API-related functionalities.
+
+To run the tests, use the following command:
+
+```bash
+pnpm test
+```
+
+---
 
 ## Technology Stack
 
@@ -50,7 +69,7 @@ Click the button below to open the project demo.
 - **Testing**: Jest, Vitest, Testing Library
 - **Version Control**: Git, GitHub
 
-<br>
+---
 
 ## Installation
 
@@ -64,29 +83,37 @@ Make sure you have the following tools installed:
 ### Setup
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/akashdeep-singh-multani/ConsultPatient.git
    ```
+
 2. Navigate to the project directory:
+
    ```bash
    cd connect_patient
    ```
+
 3. Install the dependencies using pnpm:
+
    ```bash
    pnpm install
    ```
+
 4. Start the development server:
+
    ```bash
    pnpm dev
    ```
-   This will start the application on http://localhost:3000.
-5. Husky Setup: The project is set up with Husky to enforce pre-commit and pre-push hooks for linting and code formatting. Husky will automatically be prepared when you run the pnpm install command. If Husky is not installed, run:
 
-bash
-Copy
-pnpm prepare
+   This will start the application on [http://localhost:3000](http://localhost:3000).
 
-<br>
+5. Husky Setup: The project is set up with Husky to enforce pre-commit and pre-push hooks for linting and code formatting. Husky will automatically be prepared when you run `pnpm install`. If Husky is not installed, run:
+   ```bash
+   pnpm prepare
+   ```
+
+---
 
 ## Scripts
 
@@ -96,7 +123,7 @@ pnpm prepare
 - `pnpm lint`: Lints the project using ESLint.
 - `pnpm prepare`: Prepares the project for Husky hooks.
 
-<br>
+---
 
 ## Usage
 
@@ -104,18 +131,16 @@ Once the server is running, open your browser and go to [http://localhost:3000](
 
 ### Example Dashboard
 
-![alt text](./src/assets/screenshots/ConnectPatient-Prod1.PNG)
-
-![alt text](./src/assets/screenshots/ConnectPatient-Prod2.PNG)
-
-![alt text](./src/assets/screenshots/ConnectPatient-Prod3.PNG)
+![Dashboard Screenshot 1](../src/assets/screenshots/ConnectPatient-Prod1.PNG)
+![Dashboard Screenshot 2](../src/assets/screenshots/ConnectPatient-Prod2.PNG)
+![Dashboard Screenshot 3](../src/assets/screenshots/ConnectPatient-Prod3.PNG)
 
 The dashboard contains:
 
 - A **Welcome Card** that introduces the user and prompts for a consult request.
 - A **Services Card** that enables users to set up reminders for their appointments.
 
-<br>
+---
 
 ## Contributing
 
@@ -137,13 +162,13 @@ We welcome contributions to CONNECT Patient! To contribute:
    ```
 6. Open a pull request.
 
-<br>
+---
 
 ## License
 
 This project is licensed under the MIT License.
 
-<br>
+---
 
 ## Acknowledgements
 
@@ -154,12 +179,14 @@ This project is licensed under the MIT License.
 
 ---
 
-Explanation of Approach
+## Explanation of Approach
+
 In this project, I followed a modular approach to component design by creating reusable components for different parts of the application, such as dashboard cards, tabs, and buttons. These components were designed to handle specific tasks (like rendering patient data, handling actions, and interacting with APIs) while ensuring ease of maintenance.
 
-The app is built with React, TypeScript, and Bootstrap, which allows for clean and scalable architecture while ensuring responsive design. Additionally, I integrated Jest and React Testing Library to create test cases for key components to ensure stability and quality of the application.
+The app is built with React, TypeScript, and Bootstrap, which allows for a clean and scalable architecture while ensuring a responsive design. Additionally, I integrated Jest and React Testing Library to create test cases for key components to ensure stability and quality of the application.
 
-Assumptions Made
-The project uses a mockData.json file to provide data when needed instead of fetching data from an API. This was done to simplify development and testing without requiring a backend server.
-The necessary configuration for tools like Husky, ESLint, and Prettier was already set up to ensure consistent code formatting and quality across the project.
-A basic understanding of React, TypeScript, and modern web development practices was assumed for contributors to the project.
+### Assumptions Made
+
+- The project uses a `mockData.json` file to provide data when needed instead of fetching data from an API. This was done to simplify development and testing without requiring a backend server.
+- The necessary configuration for tools like Husky, ESLint, and Prettier was already set up to ensure consistent code formatting and quality across the project.
+- A basic understanding of React, TypeScript, and modern web development practices was assumed for contributors to the project.
