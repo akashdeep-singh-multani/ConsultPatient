@@ -32,7 +32,7 @@
 
 Click the button below to open the project demo:
 
-[Live Demo](https://connect-patient-72xo4dc6m-akashs-projects-931526f1.vercel.app)
+[Live Demo](https://connect-patient-qlxmi49zh-akashs-projects-931526f1.vercel.app)
 
 ---
 
@@ -136,7 +136,6 @@ Once the server is running, open your browser and go to [http://localhost:3000](
 <img width="930" alt="ConnectPatient-Prod2" src="https://github.com/user-attachments/assets/4acef612-c63f-48e8-82ff-f18feedc3fe6" />
 
 <img width="938" alt="ConnectPatient-Prod3" src="https://github.com/user-attachments/assets/82dd10fe-5465-4498-bfef-af7537a9c52b" />
-
 
 The dashboard contains:
 

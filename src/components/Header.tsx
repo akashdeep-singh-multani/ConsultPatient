@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Logo = lazy(() => import('./Header/Logo'));
 const HamburgerMenu = lazy(() => import('./Header/HamburgerMenu'));
 const UserAvatar = lazy(() => import('./Header/UserAvatar'));
-const UserDropdown = lazy(() => import('./Header/UserDropdown'));
+// const UserDropdown = lazy(() => import('./Header/UserDropdown'));
 
 /**
  * A header component that includes a logo, navigation links, a hamburger menu for mobile, and a user avatar with a dropdown.
@@ -52,32 +52,31 @@ const Header: React.FC = () => {
         <Logo />
       </Suspense>
 
-      {/* Navigation menu */}
-      <nav className={`header__nav ${isNavOpen ? 'header__nav--open' : ''}`}>
-        <Link
-          to="#home"
-          className={`header__nav-link ${activeLink === 'home' ? 'active' : ''}`}
-          onClick={() => handleLinkClick('home')}
-        >
-          Home
-        </Link>
-        <Link
-          to="#faq"
-          className={`header__nav-link ${activeLink === 'faq' ? 'active' : ''}`}
-          onClick={() => handleLinkClick('faq')}
-        >
-          FAQ
-        </Link>
-        <Link
-          to="#help"
-          className={`header__nav-link ${activeLink === 'help' ? 'active' : ''}`}
-          onClick={() => handleLinkClick('help')}
-        >
-          Help
-        </Link>
-      </nav>
-
       <div className="flex-end">
+        {/* Navigation menu */}
+        <nav className={`header__nav ${isNavOpen ? 'header__nav--open' : ''}`}>
+          <Link
+            to="#home"
+            className={`header__nav-link ${activeLink === 'home' ? 'active' : ''}`}
+            onClick={() => handleLinkClick('home')}
+          >
+            Home
+          </Link>
+          <Link
+            to="#faq"
+            className={`header__nav-link ${activeLink === 'faq' ? 'active' : ''}`}
+            onClick={() => handleLinkClick('faq')}
+          >
+            FAQ
+          </Link>
+          <Link
+            to="#help"
+            className={`header__nav-link ${activeLink === 'help' ? 'active' : ''}`}
+            onClick={() => handleLinkClick('help')}
+          >
+            Help
+          </Link>
+        </nav>
         {/* Suspense wrapper for lazy-loaded HamburgerMenu component */}
         <Suspense fallback={<div>Loading Menu...</div>}>
           <HamburgerMenu onClick={toggleNav} />
@@ -91,11 +90,11 @@ const Header: React.FC = () => {
           </Suspense>
 
           {/* Conditionally render UserDropdown if the dropdown is open */}
-          {dropdownOpen && (
+          {/* {dropdownOpen && (
             <Suspense fallback={<div>Loading Dropdown...</div>}>
               <UserDropdown />
             </Suspense>
-          )}
+          )} */}
         </div>
       </div>
     </header>

@@ -34,6 +34,13 @@ body,
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 32.69px;
+
+  @media (max-width: 769px) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27.24px;
+    letter-spacing: -0.02em;
+  }
 }
 
 .card-body-description {
@@ -73,8 +80,16 @@ body,
   font-weight: 400;
   color: variable.$teritiary-color;
   line-height: 40.86px;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   color: #be0028;
+
+  @media (max-width: 769px) {
+    font-size: 22px;
+    font-weight: 500;
+    color: #be0028;
+    line-height: 29.96px;
+    letter-spacing: -0.02em;
+  }
 }
 
 .heading {
@@ -82,7 +97,15 @@ body,
   font-weight: 700;
   color: #1a1a1a;
   line-height: 54.48px;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 769px) {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 40.86px;
+    letter-spacing: -0.02em;
+  }
 }
 
 .flex-column {
