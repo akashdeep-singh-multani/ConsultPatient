@@ -64,9 +64,9 @@ pnpm test
 
 ## Technology Stack
 
-- **Frontend**: React, React Router, Bootstrap, Sass
+- **Frontend**: React, React Router, Bootstrap, Sass, SCSS
 - **Build Tools**: Vite, TypeScript, ESLint, Prettier
-- **Testing**: Jest, Vitest, Testing Library
+- **Testing**: Jest
 - **Version Control**: Git, GitHub
 
 ---
@@ -185,10 +185,10 @@ This project is licensed under the MIT License.
 
 In this project, I followed a modular approach to component design by creating reusable components for different parts of the application, such as dashboard cards, tabs, and buttons. These components were designed to handle specific tasks (like rendering patient data, handling actions, and interacting with APIs) while ensuring ease of maintenance.
 
-The app is built with React, TypeScript, and Bootstrap, which allows for a clean and scalable architecture while ensuring a responsive design. Additionally, I integrated Jest and React Testing Library to create test cases for key components to ensure stability and quality of the application.
+The app is built with React, TypeScript, and Bootstrap, which allows for a clean and scalable architecture while ensuring a responsive design. Additionally, I integrated Jest to create test cases for key components to ensure stability and quality of the application.
 
 ### Assumptions Made
 
-- The project uses a `mockData.json` file to provide data when needed instead of fetching data from an API. This was done to simplify development and testing without requiring a backend server.
+- The project uses a `mockData.json` file to provide data when needed as when fetching data from an API. This was done to simplify development and testing without requiring a backend server.
 - The necessary configuration for tools like Husky, ESLint, and Prettier was already set up to ensure consistent code formatting and quality across the project.
 - A basic understanding of React, TypeScript, and modern web development practices was assumed for contributors to the project.
