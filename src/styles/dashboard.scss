@@ -43,6 +43,10 @@
   background-color: transparent !important; /* Ensure no background for active tab */
 }
 
+.nav-pills .nav-link.active .tabview-btn-icon {
+  color: black !important;
+}
+
 /* Optional: Icon styling */
 .tabview-btn-icon {
   margin-right: 8px;

@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AboutMedicationCard from '../AboutMedicationCard';
-import { VIDEO_POSTER_URL } from '../../constants/constants';
+import videoPosterUrl from '../assets/video_bg.png';
 
 // Mocking the constants and any necessary external assets
 jest.mock('../../constants/constants', () => ({
@@ -42,7 +42,7 @@ describe('AboutMedicationCard', () => {
     render(<AboutMedicationCard {...propsWithVideo} />);
 
     const videoElement = screen.getByTestId('video-element');
-    expect(videoElement).toHaveAttribute('poster', VIDEO_POSTER_URL);
+    expect(videoElement).toHaveAttribute('poster', videoPosterUrl);
   });
 
   test('video controls are initially hidden before play', () => {

@@ -24,7 +24,8 @@ describe('TabsComponent', () => {
     {
       eventKey: 'tab1',
       label: 'Tab 1',
-      icon: () => <span>🌟</span>,
+      // icon: () => <span>🌟</span>,
+      icon: '',
       cardTitle: 'Card Title 1',
       cardDescription: 'Description for Card 1',
       buttonLabel: 'Click me 1',
@@ -32,7 +33,8 @@ describe('TabsComponent', () => {
     {
       eventKey: 'tab2',
       label: 'Tab 2',
-      icon: () => <span>🔧</span>,
+      // icon: () => <span>🔧</span>,
+      icon: '',
       cardTitle: 'Card Title 2',
       cardDescription: 'Description for Card 2',
       buttonLabel: 'Click me 2',

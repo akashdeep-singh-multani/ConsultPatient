@@ -32,7 +32,7 @@
 
 Click the button below to open the project demo:
 
-[Live Demo](https://connect-patient-qlxmi49zh-akashs-projects-931526f1.vercel.app)
+[Live Demo](https://connect-patient-mf5rwcq9z-akashs-projects-931526f1.vercel.app)
 
 ---
 

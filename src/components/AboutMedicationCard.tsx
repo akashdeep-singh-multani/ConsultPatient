@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import '../styles/about-medication-card.scss';
-import { VIDEO_POSTER_URL } from '../constants/constants';
+import videoPosterUrl from '../assets/video_bg.png';
 
 interface AboutMedicationCardProps {
   heading: string;
@@ -37,7 +37,7 @@ const AboutMedicationCard: React.FC<AboutMedicationCardProps> = ({
               muted // Mute the video (optional)
               loop // Loop the video (optional)
               preload="metadata" // Load only metadata for performance
-              poster={VIDEO_POSTER_URL} // Optional: Add a poster image for the first frame
+              poster={videoPosterUrl} // Optional: Add a poster image for the first frame
               className="about-medication-video"
               onClick={handlePlayClick} // Play video on click
               data-testid="video-element"

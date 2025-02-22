@@ -27,9 +27,14 @@ const TabsComponent: React.FC<TabsComponentProps> = ({ tabsData }) => {
       <Nav variant="pills" className="mb-3">
         {tabsData.map((tab, index) => (
           <Nav.Item key={index}>
-            <Nav.Link eventKey={tab.eventKey}>
+            <Nav.Link eventKey={tab.eventKey} disabled>
               {/* Dynamically render the icon for each tab */}
-              <tab.icon className="tabview-btn-icon" /> {tab.label}
+              <img
+                src={tab.icon}
+                // alt={tab.label}
+                className="tabview-btn-icon"
+              />
+              {tab.label}
             </Nav.Link>
           </Nav.Item>
         ))}

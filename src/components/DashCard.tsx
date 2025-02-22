@@ -40,7 +40,7 @@ const DashCard: React.FC<DashCardProps> = ({ dashData }) => {
       {/* Left Column */}
       <div className="left-section">
         <SimpleCard title={heading} description={description} />
-        <br></br>
+        {/* <br></br> */}
         <h2 className="sub-heading pad-left">Services</h2>
         {services.map((service, index) => (
           <Suspense

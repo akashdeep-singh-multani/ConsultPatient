@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/questions-card.scss';
 import Button from './Button';
+import msgIcon from '../assets/msg_icon.png';
 
 /**
  * Props for the QuestionsCard component.
@@ -36,17 +37,19 @@ const QuestionsCard: React.FC<QuestionsCardProps> = ({
     <div className="questions-card">
       <div className="questions-card__header">
         {/* Icon for the question card */}
-        <div className="questions-card__icon">💬</div>
+        <div className="questions-card__icon">
+          <img src={msgIcon} />
+        </div>
 
         {/* Title of the card */}
-        <h4 className="card-body-heading">{title}</h4>
+        <h4 className="questions-card__title">{title}</h4>
       </div>
 
       {/* Description of the card */}
-      <p className="card-body-description">{description}</p>
+      <p className="quest-card-body-description">{description}</p>
 
       {/* Operating hours displayed in the card */}
-      <p className="card-body-description">{operatingHours}</p>
+      <p className="quest-card-body-description">{operatingHours}</p>
 
       <div className="flex-end">
         {/* Button with passed text, styled as primary and disabled */}
